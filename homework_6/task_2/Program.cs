@@ -18,9 +18,9 @@ double[] lineData2 = INputLineData(LINE2);
 
 if (ValidateLines(lineData1, lineData2))
 {
-    double[] coord = findCoords(lineData1, lineData2);
-    Console.write($"Точка пересечения уравнений y={lineData1[COEFFICIENT]}*x+{linedata1[CONTSTANT]} и  y={lineData2[COEFFICIENT]}*x+{linedata2[CONTSTANT]}");
-    System.Console.WriteLine($" имеет координаты ({coord[X_COORD]}, coord[Y_COORD])");
+    double[] coord = FindCoords(lineData1, lineData2);
+    // Console.write($"Точка пересечения уравнений y={lineData1[COEFFICIENT]}*x+{linedata1[CONTSTANT]} и  y={lineData2[COEFFICIENT]}*x+{linedata2[CONTSTANT]}");
+    // System.Console.WriteLine($" имеет координаты ({coord[X_COORD]}, coord[Y_COORD])");
 }
 
 double Prompt(string message)
@@ -45,10 +45,10 @@ double[] InputLineData(int numberOfline)
 double[] FindCoords(double[] lineData1, double[] lineData2)
 {
     double[] coord = new double[2];
-    coord[X_COORD] = (lineData1[CONTSTANT]) - lineData2[CONTSTANT]) /
+    coord[X_COORD] = (lineData1[CONTSTANT] - lineData2[CONTSTANT]) /
     (lineData2[COEFFICIENT] - lineData1[COEFFICIENT]);
-coord[Y_COORD] = lineData1[CONTSTANT] * FindCoords[X_COORD] + lineData1[CONTSTANT];
-return coord;
+    // coord[Y_COORD] = lineData1[CONTSTANT] * FindCoords(X_COORD) + lineData1[CONTSTANT];
+    return coord;
 }
 
 bool ValidateLines(double[] lineData1, double[] lineData2)
@@ -66,5 +66,5 @@ bool ValidateLines(double[] lineData1, double[] lineData2)
             return false;
         }
     }
-    return true
+    return true;
 }
