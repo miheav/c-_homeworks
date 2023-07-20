@@ -51,23 +51,11 @@ int[,] sortArray(int[,] array)
                 nextValue = array[i, j];
                 array[i, j - 1] = nextValue;
                 array[i, j] = currentValue;
+                j = 0;
             }
 
         }
 
-        for (int j = 1; j < array.GetLength(1); j++)
-        {
-
-
-            if (array[i, j] > array[i, j - 1])
-            {
-                currentValue = array[i, j - 1];
-                nextValue = array[i, j];
-                array[i, j - 1] = nextValue;
-                array[i, j] = currentValue;
-            }
-
-        }
     }
 
     return array;

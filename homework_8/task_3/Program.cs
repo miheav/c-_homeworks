@@ -61,8 +61,8 @@ int[,] multiplier(int[,] arrayTriple, int[,] arrayTwice)
 
 int[,] arrayTwice = GenerateArray(2, 2);
 int[,] arrayTriple = GenerateArray(2, 3);
+int[,] newArray = multiplier(arrayTriple, arrayTwice)
 
 
-for (int i = 0; i < arrayTriple)
-    printD2Array(arrayTwice);
-printD2Array(arrayTriple);
+printD2Array(newArray);
+
